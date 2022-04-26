@@ -19,7 +19,9 @@ pipeline {
      stage('Code Analysis') {
       steps {
         // script
-        sh 'mvn sonar:sonar'
+         withSonarQubeEnv('sonarqube-server') {
+            sh 'mvn sonar:sonar'
+         }
       }
     }
   }
