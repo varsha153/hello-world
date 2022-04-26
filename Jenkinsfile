@@ -1,5 +1,5 @@
 pipeline {
-   agent {label 'java'}
+   agent any
 
   stages {
     stage('Checkout') {
@@ -13,6 +13,13 @@ pipeline {
       steps {
         // script
         sh 'mvn clean install'
+      }
+    }
+     
+     stage('Code Analysis') {
+      steps {
+        // script
+        sh 'mvn sonar:sonar'
       }
     }
   }
