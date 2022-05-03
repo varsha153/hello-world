@@ -35,6 +35,40 @@ pipeline {
             }
         }
      
+     stage("Dev Deployment") {
+            steps {
+                echo 'Dev'
+            }
+        }
+     
+      
+     stage("Test Deployment") {
+            steps {
+                echo 'Test'
+            }
+        }
+     
+      
+     stage("UAT Deployment") {
+            steps {
+                echo 'UAT'
+            }
+        }
+     
+      
+     stage("Stage Deployment") {
+            steps {
+                echo 'Stage'
+            }
+        }
+     
+      
+     stage("Prod Deployment") {
+            steps {
+                echo 'Prod'
+            }
+        }
+     
      
   }
 
